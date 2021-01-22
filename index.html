@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BasicSetupWorld</title>
+	 <link rel="stylesheet" href="body.css">
+	<style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+		}
+
+		body {
+			background-color: #ffffff;
+			margin: 0;
+			overflow: hidden;
+			font-family: arial;
+		}
+
+		#blocker {
+			position: absolute;
+
+			width: 100%;
+			height: 100%;
+
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+
+		#info {
+			text-align: center;
+			padding: 10px;
+			z-index: 10;
+			width: 100%;
+			position: absolute;
+			color: white;
+		}
+
+		#instructions {
+			width: 100%;
+			height: 100%;
+
+			display: -webkit-box;
+			display: -moz-box;
+			display: box;
+
+			-webkit-box-orient: horizontal;
+			-moz-box-orient: horizontal;
+			box-orient: horizontal;
+
+			-webkit-box-pack: center;
+			-moz-box-pack: center;
+			box-pack: center;
+
+			-webkit-box-align: center;
+			-moz-box-align: center;
+			box-align: center;
+
+			color: #ffffff;
+			text-align: center;
+
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+
+<script>
+
+const button = document.querySelector("button");
+const close = document.querySelector(".close");
+const trailer = document.querySelector(".trailer");
+const video = document.querySelector("video");
+//const coin = document.querySelector(".coin");
+//const coin3 = document.querySelector(".coin3");
+
+//const trailer2 = document.querySelector(".trailer2");
+//const close2 = document.querySelector(".close2");
+
+button.addEventListener('click', () =>{
+trailer.style.visibility = "visible";
+trailer.style.opacity = 1;
+});
+
+//button2.addEventListener('click', () =>{
+//coin2.style.visibility = "visible";
+//coin2.style.opacity = 1;}
+
+close.addEventListener('click', () =>{
+trailer.style.visibility = "hidden";
+trailer.style.opacity = 0;
+//coin.style.visibility = "visible";
+//coin.style.opacity = 1;
+
+video.pause();
+video.currentTime = 0;
+});
+
+//close2.addEventListener('click', () =>{
+//trailer2.style.visibility = "hidden";
+//trailer2.style.opacity = 0;
+//coin3.style.visibility = "visible";
+//coin3.style.opacity = 1;
+
+
+</script>
+		<div id="blocker">
+
+			<div id="instructions">
+				<!-- <br /><img width="100/vw" id="centertop" src="textures/purple.jpg"/> -->
+						<img id="centermiddle" src="textures/view-copy.jpg"/>
+						<!-- <img id="centerback" src="textures/purple.jpg"/> -->
+							<span style="font-size: 40px;"></span>	<br />
+
+					</div>
+					<div id="assets"><img id="landscape-image" src="textures/Heightmap.png"/></div>
+				</div>
+
+	   <!-- <img src="textures/purple.jpg" id="buttonleftbottom" > -->
+		 <!-- <img src="Images/1 euro cinema.online.png" id="title"> -->
+		<div id="overlay">
+
+		</div>
+	<!-- <script type="module" src="main.js"></script> -->
+	<script type="module" src="main-cave.js"></script>
+	<!-- <script type="module" src="main-sorcerers.js"></script> -->
+	<!-- <script type="module" src="main-cave.js"></script> -->
+	<!-- <script type="module" src="main-lighthouse.js"></script> -->
+
+</body>
+
+</html>
